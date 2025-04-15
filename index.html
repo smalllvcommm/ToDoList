@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="modal.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="user-info">
+            <!-- 这里可以放置用户个人信息 -->
+            <h2>个人信息</h2>
+            <p>用户名: John Doe</p>
+            <p>邮箱: john.doe@example.com</p>
+        </div>
+        <div class="Today">
+            <button class="navbar-button" onclick="GoToday()">Today</button>
+        </div>
+        <button id="NewTodo">新建任务</button>
+    </div>
+
+    
+    <div class="container" id="Today">
+        <h1>My To-Do List</h1>
+        <ul id="tasks">
+            <!-- 任务列表将动态添加到这里 -->
+        </ul>
+    </div>
+
+    <!-- 模态框 -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>新建任务</h2>
+            <label for="task-name">任务名称:</label>
+            <input type="text" id="task-name" placeholder="请输入任务名称">
+            <label for="task-description">任务介绍:</label>
+            <textarea id="task-description" placeholder="请输入任务介绍"></textarea>
+            <button onclick="addTask()">Add Task</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="JAVA.js"></script>
+</body>
+
+</html>
